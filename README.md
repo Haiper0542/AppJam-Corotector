@@ -46,5 +46,5 @@
 * **서프라이즈는 양손에 총을 들고 있으며 매우 발사 속도가 빠릅니다.**
 <img width="70%" src=https://user-images.githubusercontent.com/40797534/56399116-1ee5e280-6287-11e9-82e6-5bf7d4637650.png></img>
 
-* **게임오버시 화면입니다.**
+* **게임오버시 화면입니다.**<br>
 <img width="70%" src=https://user-images.githubusercontent.com/40797534/56399094-0fff3000-6287-11e9-84e8-7155a69f006e.png></img>
