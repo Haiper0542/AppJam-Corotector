@@ -54,3 +54,41 @@
 
 * **게임오버시 화면입니다.**<br>
 <img width="70%" src=https://user-images.githubusercontent.com/40797534/56399094-0fff3000-6287-11e9-84e8-7155a69f006e.png></img>
+
+## 코드
+* #### 일반 드론 공격 부분
+```C#
+if (attackTime > attackDelay)
+   {
+   attackTime = 0;
+   bulletCount--;
+   try
+   {
+      audioSource.PlayOneShot(shotClip);
+   }
+   catch {  }
+            
+   if (Physics.Raycast(muzzle.position, muzzle.rotation * Vector3.forward, out hit, enemyLayer))
+   {
+      Debug.Log(hit.transform.name);
+      if (hit.transform.CompareTag("Player"))
+         hit.transform.GetComponent<PlayerCtrl>().TakeDamage(damage);
+      if (hit.transform.CompareTag("Core"))
+         hit.transform.GetComponent<CoreCtrl>().TakeDamage(damage);
+
+      if (hit.transform.CompareTag("Shield"))
+      {
+         audioSource.PlayOneShot(shieldClip);
+         Instantiate(spark, hit.point, Quaternion.Euler(hit.normal));
+      }
+   }
+
+   if (bulletCount <= 0)
+   {
+   reloadTime = reloadTerm;
+   isMoving = true;
+   isReloading = true;
+   demoLaser.SetActive(true);
+   }
+}
+```
