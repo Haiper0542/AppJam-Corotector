@@ -64,7 +64,7 @@ if (attackTime > attackDelay)
    bulletCount--;
    try
    {
-      audioSource.PlayOneShot(shotClip);
+      audioSource.PlayOneShot(shotClip); //효과음 추가 할꺼야???
    }
    catch {  }
             
@@ -75,7 +75,7 @@ if (attackTime > attackDelay)
          hit.transform.GetComponent<PlayerCtrl>().TakeDamage(damage);
       if (hit.transform.CompareTag("Core"))
          hit.transform.GetComponent<CoreCtrl>().TakeDamage(damage);
-
+      //방패로 막을 시 스파크
       if (hit.transform.CompareTag("Shield"))
       {
          audioSource.PlayOneShot(shieldClip);
@@ -83,12 +83,13 @@ if (attackTime > attackDelay)
       }
    }
 
+   //
    if (bulletCount <= 0)
    {
-   reloadTime = reloadTerm;
-   isMoving = true;
-   isReloading = true;
-   demoLaser.SetActive(true);
+      reloadTime = reloadTerm;
+      isMoving = true;
+      isReloading = true;
+      demoLaser.SetActive(true);
    }
 }
 ```
