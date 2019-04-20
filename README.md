@@ -28,6 +28,10 @@
   * **스나이퍼 드론**
       * 플레이어 혹은 코어중 하나를 타겟으로 정합니다.
       * 멀리서 강력한 데미지를 주는 총을 한 발씩 발사하며, 체력은 낮니다.
+      
+### 시연 영상
+* [https://youtu.be/wPs0yXkAS_4](https://youtu.be/wPs0yXkAS_4) <br>
+
 ### 게임 화면
 * **게임의 메인화면입니다.**<br>
 <img width="70%" src=https://user-images.githubusercontent.com/40797534/56399107-19889800-6287-11e9-9c29-b70f75fe194c.png></img>
